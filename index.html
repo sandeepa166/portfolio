@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <p>Undergraduate IT Student</p>
+                <h1>Hi, I'm <span> Sandeepa </span> <br>from Sri Lanka kegalla</h1>
+            </div>
+        </div>
+        </div>
+        <!--.......about........-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1> 
+                        <p>I am a passionate and dedicated undergraduate IT student with a strong foundation in programming and problem-solving. I am always eager to learn new technologies and apply my skills to real-world projects.</p>
+
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+                            <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+                            <p class="tab-links" onclick="opentab('education')"> Education </p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX Design</span><br>Designing web applications with a focus on user experience.</li>
+                                <li><span>Web Development</span><br>Building responsive and dynamic websites using HTML, CSS, and JavaScript.</li>
+                                <li><span>Programming Languages</span><br>Proficient in Python, Java, and C++.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2020 - 2021</span><br>Designing web applications with a focus on user experience.</li>
+                                <li><span>2021 - 2022</span><br>Building responsive and dynamic websites using HTML, CSS, and JavaScript.</li>
+                                <li><span>2022 - 2023</span><br>Proficient in Python, Java, and C++.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2017</span><br>Designing web applications with a focus on user experience.</li>
+                                <li><span>2018 - 2020</span><br>Building responsive and dynamic websites using HTML, CSS, and JavaScript.</li>
+                                <li><span>2022 - 2026</span><br>Proficient in Python, Java, and C++.</li>
+                            </ul>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!..............services..............>
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1> 
+                <div class="services-list">
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>Creating visually appealing and user-friendly websites that effectively communicate your brand's message.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <h2>Web Development</h2>
+                        <p>Building responsive and dynamic websites using HTML, CSS, and JavaScript.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <h2>Programming Languages</h2>
+                        <p>Proficient in Python, Java, and C++.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+</body>
+</html>
